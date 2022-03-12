@@ -2,10 +2,8 @@
 {
     public class RestPathConstants : JsonConstants
     {
-     
-
         // REST Paths
-        public const string BaseRestPath = "rest/api/2";
+        public const string BaseRestPath = "rest/api/3";
 
         public const string Project = "project";
 

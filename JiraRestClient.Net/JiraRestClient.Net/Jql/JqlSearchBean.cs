@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Cschulc.Jira.Jql;
 
 namespace JiraRestClient.Net.Jql
@@ -9,11 +10,13 @@ namespace JiraRestClient.Net.Jql
         /**
          * Result list start at.
          */
+        [JsonPropertyName("startAt")]
         public int StartAt { get; set; }
 
         /**
          * Maximum result list size.
          */
+        [JsonPropertyName("maxResults")]
         public int MaxResults { get; set; }
 
         /**
@@ -21,8 +24,10 @@ namespace JiraRestClient.Net.Jql
          */
         public readonly List<string> fields = new List<string>();
 
+        [JsonPropertyName("jql")]
         public string Jql { get; set; }
 
+        [JsonPropertyName("expand")]
         public readonly List<string> Expand = new List<string>();
 
 

@@ -32,8 +32,8 @@ namespace JiraRestClient.Net
 
         public JiraRestClient(Uri uri, string username, string password)
         {
-            ServicePointManager.ServerCertificateValidationCallback +=
-                (sender, cert, chain, sslPolicyErrors) => true;
+            //ServicePointManager.ServerCertificateValidationCallback +=
+            //    (sender, cert, chain, sslPolicyErrors) => true;
             Client = new HttpClient();
             BaseUri = uri;
             Username = username;
@@ -44,8 +44,8 @@ namespace JiraRestClient.Net
 
         public JiraRestClient(Uri uri, string token)
         {
-            ServicePointManager.ServerCertificateValidationCallback +=
-                (sender, cert, chain, sslPolicyErrors) => true;
+            //ServicePointManager.ServerCertificateValidationCallback +=
+            //    (sender, cert, chain, sslPolicyErrors) => true;
             Client = new HttpClient();
             BaseUri = uri;
             Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", token);
@@ -53,8 +53,8 @@ namespace JiraRestClient.Net
 
         public JiraRestClient(Uri uri)
         {
-            ServicePointManager.ServerCertificateValidationCallback +=
-                (sender, cert, chain, sslPolicyErrors) => true;
+            //ServicePointManager.ServerCertificateValidationCallback +=
+            //    (sender, cert, chain, sslPolicyErrors) => true;
             Client = new HttpClient();
             BaseUri = uri;
         }
